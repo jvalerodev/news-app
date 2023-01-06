@@ -1,3 +1,5 @@
+import ReadMoreButton from './ReadMoreButton';
+
 type Props = {
   article: Article;
 };
@@ -27,6 +29,8 @@ const Article = ({ article }: Props) => {
             <p>{article.published_at}</p>
           </div>
         </div>
+
+        <ReadMoreButton article={article} />
       </div>
     </article>
   );
