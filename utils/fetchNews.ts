@@ -61,8 +61,6 @@ const fetchNews = async (
     })
   });
 
-  console.log('LOADING NEW DATA FROM API for category ->', category, keywords);
-
   const { data } = await res.json();
 
   // Sort function by images vs. not images present

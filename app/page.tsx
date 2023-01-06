@@ -1,13 +1,9 @@
-import { categories } from '../constants';
 import fetchNews from '../utils/fetchNews';
 import NewsList from './NewsList';
-import response from '../response.json';
-import sortNewsByImage from '../utils/sortNewsByImage';
+import { categories } from '../constants';
 
 const Home = async () => {
-  let news: NewsResponse = response;
-  news = sortNewsByImage(news);
-  // const news: NewsResponse = await fetchNews(categories.join(','));
+  const news: NewsResponse = await fetchNews(categories.join(','));
 
   return (
     <main>
